@@ -8,7 +8,7 @@ class Solution {
         m=s;
         if(s<0)
         s=0;
-       } 
+       }
        return m;
     }
 }
