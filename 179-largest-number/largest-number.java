@@ -10,7 +10,9 @@ class Solution {
        return "0";
        StringBuilder sb=new StringBuilder();
        for(String x:s)
-       sb.append(x);
+       {
+        sb.append(x);
+       }
        return sb.toString();
     }
 }
