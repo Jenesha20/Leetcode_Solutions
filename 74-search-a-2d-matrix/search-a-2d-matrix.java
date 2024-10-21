@@ -8,7 +8,6 @@ class Solution {
             l.add(matrix[i][j]);
         }
       } 
-      for(int x:l)
       if(l.contains(target))
       return true;
       return false;
