@@ -31,12 +31,12 @@ class Solution {
      //Columns
      for(int i=0;i<m;i++)
      {
-         if(grid[i][0]==1)//first column
+         if(grid[i][0]==1 && vis[i][0]==0)//first column
          {
             q.add(new Pair(i,0));
             vis[i][0]=1;
          }
-         if(grid[i][n-1]==1)
+         if(grid[i][n-1]==1 && vis[i][n-1]==0)
          {
             q.add(new Pair(i,n-1));//last column
             vis[i][n-1]=1;
