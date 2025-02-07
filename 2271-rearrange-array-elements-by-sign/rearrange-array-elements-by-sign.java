@@ -11,14 +11,10 @@ class Solution {
         l2.add(nums[i]);
        }
        int j=0;
-       for(int i=0;i<nums.length;i+=2)
+       for(int i=0;i<l1.size();i++)
        {
-        a[i]=l1.get(j++);
-       }
-       j=0;
-       for(int i=1;i<nums.length;i+=2)
-       {
-        a[i]=l2.get(j++);
+        a[j++]=l1.get(i);
+        a[j++]=l2.get(i);
        }
        return a;
     }
