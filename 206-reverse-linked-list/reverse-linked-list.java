@@ -19,10 +19,6 @@ class Solution {
         cur.next=prev;
         prev=cur;
         cur=next;
-        while(next!=null)
-        {
-            next=next.next;
-        }
       }  
       return prev;
     }
