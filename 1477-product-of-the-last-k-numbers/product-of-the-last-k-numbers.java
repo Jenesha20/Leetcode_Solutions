@@ -20,6 +20,8 @@ class ProductOfNumbers {
              k--;
            }
         }
+        // for(int i=l.size()-k;i<l.size();i++)
+        // x*=l.get(i);
         return x;
     }
 }
