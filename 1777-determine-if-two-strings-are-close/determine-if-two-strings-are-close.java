@@ -8,8 +8,8 @@ class Solution {
         hmap1.put(c,hmap1.getOrDefault(c,0)+1);
         for(char c:word2.toCharArray())
         hmap2.put(c,hmap2.getOrDefault(c,0)+1);
-        if(!hmap1.keySet().equals(hmap2.keySet()))
-        return false;
+         if(!hmap1.keySet().equals(hmap2.keySet()))
+         return false;
         List<Integer> l1=new ArrayList<>(hmap1.values());
         List<Integer> l2=new ArrayList<>(hmap2.values());
         Collections.sort(l1);
