@@ -1,39 +1,34 @@
 class Solution {
     public int maximumCandies(int[] candies, long k) {
-        int max=candies[0];
-        for(int i=1;i<candies.length;i++)
+        int l=1,r=candies[0],t=0;
+        for(int x:candies)
+       {
+         r=Math.max(r,x);
+       }
+        int res=0;
+        while(l<=r)
         {
-            max=Math.max(candies[i],max);
+            int mid=(l+r)/2;
+            if(can(candies,k,mid))
+            {
+                res=mid;
+                l=mid+1;
+            }
+            else
+            {
+                r=mid-1;
+            }
         }
-        int low=1,high=max;
-        int ans=0;
-        while(low<=high)
-        {
-           int mid=(low+high)/2;
-           if(valid(mid,candies,k))
-           {
-            ans=mid;
-            low=mid+1;
-           }
-           else
-           {
-            high=mid-1;
-           }
-        }
-        return ans;
+        return res;
     }
-    public  boolean valid(int mid,int candies[],long k)
+    static boolean can(int[] a,long k,int mid)
     {
         long c=0;
-        for(int i=0;i<candies.length;i++)
-        {
-          if(candies[i]>=mid)
-          {
-            c+=candies[i]/mid;
-          }
-        }
-        if(c>=k)
-        return true;
-        return false;
+        for(int x:a)
+       {
+        if(x>=mid)
+         c+=x/mid;
+       }
+        return c>=k;
     }
 }
