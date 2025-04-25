@@ -13,22 +13,22 @@ class Solution {
         List<Integer> l=new ArrayList<>();
         for(int i=0;i<lists.length;i++)
         {
-           ListNode cur=lists[i];
-           while(cur!=null)
-           {
-            l.add(cur.val);
-            cur=cur.next;
-           }
+            ListNode cur=lists[i];
+            while(cur!=null)
+            {
+                l.add(cur.val);
+                cur=cur.next;
+            }
         }
         Collections.sort(l);
-        ListNode dum=new ListNode(0);
-        ListNode tail=dum;
-        for(int x:l)
-        {
-            tail.next=new ListNode(x);
-            tail=tail.next;
-        }
-        return dum.next;
-        
+       ListNode head=new ListNode(0);
+       ListNode cur=head;
+       for(int x:l)
+       {
+        cur.next=new ListNode(x);
+        cur=cur.next;
+       }
+       return head.next;
+
     }
 }
