@@ -14,13 +14,12 @@
  * }
  */
 class Solution {
-    public boolean hasPathSum(TreeNode root, int targetSum) {
+    public boolean hasPathSum(TreeNode root, int ts) {
         if(root==null)
         return false;
+        ts=ts-root.val;
         if(root.left==null && root.right==null)
-        return targetSum==root.val;
-        boolean l=hasPathSum(root.left,targetSum-root.val);
-        boolean r=hasPathSum(root.right,targetSum-root.val);
-        return l||r;
+        return ts==0;
+        return (hasPathSum(root.left,ts) || hasPathSum(root.right,ts));
     }
 }
