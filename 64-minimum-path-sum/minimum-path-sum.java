@@ -1,4 +1,3 @@
-import java.util.*;
 class Solution {
     public int minPathSum(int[][] grid) {
         int m = grid.length;
@@ -19,19 +18,19 @@ class Solution {
         // }
         // return grid[m-1][n-1];
         int[][] l=new int[m][n];
-       for(int i=0;i<m;i++)
-       {
-        for(int j=0;j<n;j++)
+        for(int i=0;i<m;i++)
         {
-            l[i][j]=-1;
+            for(int j=0;j<n;j++)
+            {
+                l[i][j]=-1;
+            }
         }
-       }
         return fin(grid,m-1,n-1,l);
     }
     public static int fin(int[][] grid,int row,int col,int[][] temp)
     {
         if(row==0 && col==0)
-        return grid[0][0];
+        return grid[row][col];
         if(row<0 || col<0)
         return Integer.MAX_VALUE;
         if(temp[row][col]!=-1)
