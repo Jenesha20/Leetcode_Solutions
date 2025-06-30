@@ -28,7 +28,7 @@ class Solution {
                 }
                 if(grid[i][j]==1)
                 {
-                    fr++;//to count the no.of fresh oranges;
+                    fr++;
                 }
             }
         }
