@@ -7,7 +7,7 @@ class Solution {
         {
             int u=x[0];
             int v=x[1];
-            adj.get(u).add(v);
+            adj.get(v).add(u);
         }
         boolean[] vis=new boolean[numCourses];
         boolean[] cur=new boolean[numCourses];
